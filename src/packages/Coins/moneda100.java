@@ -1,7 +1,7 @@
 package packages.Coins;
 
-public class moneda100 extends moneda {
-    public moneda100() {
+public class Moneda100 extends Moneda {
+    public Moneda100() {
         super(100);
     }
 }

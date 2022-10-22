@@ -16,9 +16,6 @@ public class Utils {
     }
 }
 
-class Moneda {
-
-}
 
 class Expendedor {
     private Deposito coca = null;
