@@ -1,4 +1,4 @@
-package packages;
+package packages.Coins;
 
 public abstract class moneda {
     private int valor;
@@ -10,5 +10,5 @@ public abstract class moneda {
     public int getValor() {
         return valor;
     }
-    
+
 }
