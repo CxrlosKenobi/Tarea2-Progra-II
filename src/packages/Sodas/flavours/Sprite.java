@@ -1,4 +1,6 @@
-package packages.sodas;
+package packages.sodas.flavours;
+
+import packages.sodas.Bebida;
 
 public class Sprite extends Bebida {
     public Sprite() {

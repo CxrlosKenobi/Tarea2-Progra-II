@@ -4,7 +4,7 @@ public abstract class Bebida {
     private String nombre;
     private int precio;
 
-    public Bebida(String nombre, int precio) {
+    public Bebida(String nombre, int precio, int numSerie) throws NoHayBebidaException, PagoInsuficienteException, PagoIncorrectoException {
         this.nombre = nombre;
         this.precio = precio;
     }
