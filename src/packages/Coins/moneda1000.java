@@ -1,4 +1,4 @@
-package packages.Coins;
+package packages.coins;
 
 public class Moneda1000 extends Moneda {
     public Moneda1000() {

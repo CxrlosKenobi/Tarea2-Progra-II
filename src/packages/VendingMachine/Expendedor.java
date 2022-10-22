@@ -1,15 +1,16 @@
-package packages.VendingMachine;
-import java.util.ArrayList;
-import packages.Sodas.*;
-import packages.Coins.*;
+package packages.vendingMachine;
+
+import packages.coins.*;
+import packages.sodas.*;
+import packages.vendingMachine.storages.*;
 
 public class Expendedor {
-    private Deposito coca = null;
-    private Deposito sprite = null;
+    private DepositoSodas coca = null;
+    private DepositoSodas sprite = null;
 
     public Expendedor(int n) {
-        coca = new Deposito();
-        sprite = new Deposito();
+        coca = new DepositoSodas();
+        sprite = new DepositoSodas();
 
         for (int i = 0; i < n; i++) {
             Bebida coke = null;

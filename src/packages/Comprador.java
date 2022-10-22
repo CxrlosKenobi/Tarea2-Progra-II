@@ -1,9 +1,9 @@
 package packages;
 
-public class Cliente {
+public class Comprador {
     private String nombre;
     
-    public Cliente(String nombre) {
+    public Comprador(String nombre) {
         this.nombre = nombre;
     }
 }

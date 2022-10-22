@@ -1,4 +1,4 @@
-package packages.Coins;
+package packages.coins;
 
 public abstract class Moneda {
     private int valor;

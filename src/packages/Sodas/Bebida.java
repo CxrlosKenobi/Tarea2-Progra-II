@@ -1,4 +1,4 @@
-package packages.Sodas;
+package packages.sodas;
 
 public abstract class Bebida {
     private String nombre;

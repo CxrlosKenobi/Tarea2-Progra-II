@@ -1,11 +1,12 @@
-package packages.VendingMachine;
+package packages.vendingMachine.storages;
 import java.util.*;
-import packages.Sodas.*;
 
-public class Deposito {
+import packages.sodas.*;
+
+public class DepositoMonedas {
     private ArrayList<Bebida> dep;
 
-    public Deposito() {
+    public DepositoMonedas() {
         dep = new ArrayList<Bebida>();
     }
 
@@ -18,7 +19,7 @@ public class Deposito {
             return dep.remove(0);
 
         } else {
-            return null;
+          return null;
         }
     }
 

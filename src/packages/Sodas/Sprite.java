@@ -1,4 +1,4 @@
-package packages.Sodas;
+package packages.sodas;
 
 public class Sprite extends Bebida {
     public Sprite() {
