@@ -1,20 +1,15 @@
-import packages.sodas.*;
-import packages.sodas.flavours.*;
 import packages.*;
 import packages.vendingMachine.*;
 import packages.coins.*;
 //
 public class App {
     public static void main(String[] args) throws Exception {
-        Moneda moneda = new Moneda1000();
-        Expendedor vendomatic = new Expendedor(10,40);
-        Comprador Carlos = new Comprador(moneda, 0, vendomatic);
+        int numBebidas = 5, precioBebidas = 500;
+        Expendedor vendomatic = new Expendedor(numBebidas, precioBebidas);
 
+        int tipoBebida = 0;
+        Moneda moneda = new Moneda100();
 
-
-
-
-
-
+        Comprador JeanPierre = new Comprador(moneda, tipoBebida, vendomatic);
     }
 }
