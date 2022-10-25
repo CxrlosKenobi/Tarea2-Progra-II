@@ -1,5 +1,4 @@
 package packages.vendingMachine;
- 
 
 import packages._exceptions.*;
 import packages.coins.*;
@@ -12,7 +11,6 @@ public class Expendedor {
     private DepositoSodas sprite = null;
     private DepositoSodas fanta = null;
     private DepositoSodas benedictino = null;
-
 
     public Expendedor(int numBebidas, int precioBebidas) {
         cocaCola = new DepositoSodas();
@@ -33,17 +31,31 @@ public class Expendedor {
         }
     }
 
-    public Bebida comprarBebida(Moneda coin, int opcionBebida) throws PagoInsuficienteException, NoHayBebidaException, PagoIncorrectoException {
+    public Bebida comprarBebida(Moneda coin, int opcionBebida)
+            throws PagoInsuficienteException, NoHayBebidaException, PagoIncorrectoException {
         if (coin != null) {
+            Bebida cache=null;
             switch (opcionBebida) {
+                case 0:
+                    cache = benedictino.getBebida();
+                    if (cache == null)
+                        throw new NoHayBebidaException();
+                    return cache;
                 case 1:
-                    return cocaCola.getBebida();
+                    cache = cocaCola.getBebida();
+                    if (cache == null)
+                        throw new NoHayBebidaException();
+                    return cache;
                 case 2:
-                    return sprite.getBebida();
+                    cache = cocaCola.getBebida();
+                    if (cache == null)
+                        throw new NoHayBebidaException();
+                    return cache;
                 case 3:
-                    return fanta.getBebida();
-                case 4:
-                    return benedictino.getBebida();
+                    cache = cocaCola.getBebida();
+                    if (cache == null)
+                        throw new NoHayBebidaException();
+                    return cache;
                 default:
                     throw new NoHayBebidaException();
             }
