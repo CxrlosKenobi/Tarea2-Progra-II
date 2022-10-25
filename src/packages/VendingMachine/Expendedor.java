@@ -1,7 +1,7 @@
 package packages.vendingMachine;
  
 
-import packages.exceptions.*;
+import packages._exceptions.*;
 import packages.coins.*;
 import packages.sodas.*;
 import packages.vendingMachine.storages.*;

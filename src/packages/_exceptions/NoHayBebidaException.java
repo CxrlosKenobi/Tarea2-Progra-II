@@ -1,4 +1,4 @@
-package packages.exceptions;
+package packages._exceptions;
 import java.lang.Exception;
 
 public class NoHayBebidaException extends Exception {

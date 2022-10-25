@@ -1,4 +1,6 @@
 package packages.sodas;
+import packages._exceptions.*;
+
 
 public abstract class Bebida {
     private String nombre;
@@ -7,6 +9,9 @@ public abstract class Bebida {
     public Bebida(String nombre, int precio, int numSerie) throws NoHayBebidaException, PagoInsuficienteException, PagoIncorrectoException {
         this.nombre = nombre;
         this.precio = precio;
+    }
+
+    public Bebida(String string, int i) {
     }
 
     public String getNombre() {
