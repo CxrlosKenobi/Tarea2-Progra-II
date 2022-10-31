@@ -8,7 +8,7 @@ public class App {
         Expendedor vendomatic = new Expendedor(numBebidas, precioBebidas);
 
         int tipoBebida = 0;
-        Moneda moneda = new Moneda100();
+        Moneda moneda = new Moneda1000();
 
         Comprador JeanPierre = new Comprador(moneda, tipoBebida, vendomatic);
     }

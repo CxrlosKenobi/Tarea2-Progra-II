@@ -1,26 +1,24 @@
 package packages.vendingMachine.storages;
 import java.util.*;
 
-import packages.sodas.*;
+import packages.coins.*;
 
 public class DepositoMonedas {
-    private ArrayList<Bebida> dep;
+    private ArrayList<Moneda> deposito;
 
     public DepositoMonedas() {
-        dep = new ArrayList<Bebida>();
+        deposito = new ArrayList<Moneda>();
     }
 
-    public void addBebida(Bebida a) {
-        dep.add(a);
+    public void addMoneda(Moneda a) {
+        deposito.add(a);
     }
 
-    public Bebida getBebida() {
-        if (dep.size() > 0) {
-            return dep.remove(0);
-
-        } else {
+    public Moneda getMoneda() {
+        if (deposito.size() > 0)
+            return deposito.remove(0);
+        else
           return null;
-        }
     }
 
 }

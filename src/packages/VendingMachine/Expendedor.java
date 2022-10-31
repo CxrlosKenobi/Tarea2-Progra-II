@@ -12,6 +12,7 @@ public class Expendedor {
     private DepositoSodas cocaCola;
     private DepositoSodas sprite;
     private DepositoSodas fanta;
+    private DepositoMonedas monedas;
 
     public Expendedor(int numBebidas, int precioBebidas) {
         this.precioBebidas = precioBebidas;
@@ -19,6 +20,7 @@ public class Expendedor {
         this.cocaCola = new DepositoSodas();
         this.sprite = new DepositoSodas();
         this.fanta = new DepositoSodas();
+        this.monedas = new DepositoMonedas();
 
         for (int i = 0; i < numBebidas; i++) {
             Bebida coke = new CocaCola(precioBebidas);
@@ -37,25 +39,31 @@ public class Expendedor {
             throws PagoInsuficienteException, NoHayBebidaException, PagoIncorrectoException {
         if (coin != null) {
             Bebida cache;
+            int vuelto;
+
             switch (opcionBebida) {
                 case 0:
                     cache = benedictino.getBebida();
-                    checkPrecioBebida(coin);
+                    vuelto = checkPrecioBebida(coin);
+                    generateChange(vuelto);
                     return checkBebidaCache(cache);
 
                 case 1:
                     cache = cocaCola.getBebida();
-                    checkPrecioBebida(coin);
+                    vuelto = checkPrecioBebida(coin);
+                    generateChange(vuelto);
                     return checkBebidaCache(cache);
 
                 case 2:
                     cache = cocaCola.getBebida();
-                    checkPrecioBebida(coin);
+                    vuelto = checkPrecioBebida(coin);
+                    generateChange(vuelto);
                     return checkBebidaCache(cache);
 
                 case 3:
                     cache = cocaCola.getBebida();
-                    checkPrecioBebida(coin);
+                    vuelto = checkPrecioBebida(coin);
+                    generateChange(vuelto);
                     return checkBebidaCache(cache);
 
                 default:
@@ -68,6 +76,9 @@ public class Expendedor {
     }
 
     public Moneda getVuelto() {
+        if (monedas.getMoneda() != null)
+            return this.monedas.getMoneda();
+
         return null;
     }
 
@@ -79,8 +90,18 @@ public class Expendedor {
             return cache;
     }
 
-    public void checkPrecioBebida(Moneda coin) throws PagoInsuficienteException {
+    public int checkPrecioBebida(Moneda coin) throws PagoInsuficienteException {
         if (this.precioBebidas > coin.getValor())
             throw new PagoInsuficienteException();
+
+        int vuelto = (coin.getValor() - this.precioBebidas) / 100;
+        
+        return vuelto;
     }
+    public void generateChange(int vuelto) {
+        for (int i = 0; i < vuelto; i++) {
+            this.monedas.addMoneda(new Moneda100());
+        }
+    }
+
 }
