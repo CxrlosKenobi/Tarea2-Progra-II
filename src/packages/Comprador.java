@@ -16,12 +16,16 @@ public class Comprador {
             enMano = exp.comprarBebida(m, cualBebida);
             System.out.println(queBebiste(enMano));
             
-            Moneda monedita = null;
-            do {
+            
+            Moneda monedita=null;
+            while (true){
                 monedita = exp.getVuelto();
                 dineroDevuelto += 100;
-
-            } while (monedita != null);
+                if (monedita == null){
+                    dineroDevuelto -= 100;
+                    break;
+                }
+            }
 
             System.out.println("Mi vuelto es: " + this.cuantoVuelto());
 

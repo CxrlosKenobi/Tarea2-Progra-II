@@ -76,7 +76,7 @@ public class Expendedor {
     }
 
     public Moneda getVuelto() {
-        if (monedas.getMoneda() != null)
+        if (monedas.getNumMonedas() != 0)
             return this.monedas.getMoneda();
 
         return null;

@@ -21,4 +21,8 @@ public class DepositoMonedas {
           return null;
     }
 
+    public int getNumMonedas() {
+        return deposito.size();
+    }
+
 }

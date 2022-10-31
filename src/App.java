@@ -5,7 +5,7 @@ import packages.coins.*;
 public class App {
     public static void main(String[] args) throws Exception {
         // Rellenamos nuestro expendedor con valores iniciales para sus productos.
-        int numBebidas = 5, precioBebidas = 500;
+        int numBebidas = 5, precioBebidas = 600;
         Expendedor vendomatic = new Expendedor(numBebidas, precioBebidas);
 
         // Simulamos al cliente, eligiendo un tipo/marca de bebida e ingresando su moneda de intercambio
