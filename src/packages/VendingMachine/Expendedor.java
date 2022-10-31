@@ -55,13 +55,13 @@ public class Expendedor {
                     return checkBebidaCache(cache);
 
                 case 2:
-                    cache = cocaCola.getBebida();
+                    cache = fanta.getBebida();
                     vuelto = checkPrecioBebida(coin);
                     generateChange(vuelto);
                     return checkBebidaCache(cache);
 
                 case 3:
-                    cache = cocaCola.getBebida();
+                    cache = sprite.getBebida();
                     vuelto = checkPrecioBebida(coin);
                     generateChange(vuelto);
                     return checkBebidaCache(cache);
@@ -83,6 +83,12 @@ public class Expendedor {
     }
 
     // Aux
+    public void generateChange(int vuelto) {
+        for (int i = 0; i < vuelto; i++) {
+            this.monedas.addMoneda(new Moneda100());
+        }
+    }
+
     public Bebida checkBebidaCache(Bebida cache) throws NoHayBebidaException {
         if (cache == null)
             throw new NoHayBebidaException();
@@ -98,10 +104,4 @@ public class Expendedor {
         
         return vuelto;
     }
-    public void generateChange(int vuelto) {
-        for (int i = 0; i < vuelto; i++) {
-            this.monedas.addMoneda(new Moneda100());
-        }
-    }
-
 }
