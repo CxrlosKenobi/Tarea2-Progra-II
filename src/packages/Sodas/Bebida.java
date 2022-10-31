@@ -22,6 +22,8 @@ public abstract class Bebida {
         return precio;
     }
 
+    public abstract String beber();
+
     @Override
     public String toString() {
         return "nombre=" + nombre + ", precio=" + precio;
