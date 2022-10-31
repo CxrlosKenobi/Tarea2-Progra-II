@@ -21,11 +21,11 @@ El espacio de trabajo desarrollado bajo el ambiente de [Java Maven](https://mark
 
 Mientras que la sub carpeta `src.packages` contiene el siguiente árbol de carpetas nombradas semánticamente conteniendo:
 
-- `coins`: implementación de clases relacionadas con la clase abstraca moneda y sus extensiones.
-- `sodas`: implementación de clases relacionadas con la clase asbtracta Bebida.
-- - `flavours`: sub carpeta de `sodas` conteniendo distintas bebidas.
-- `vendingMachine`: implementación de la máquina expendedora.
-- - `storages`: sub carpeta de `vendingMachine` con clases relacionadas a los depósitos de la máquina expendedora.
+- `coins`: Implementación de clases relacionadas con la clase abstraca moneda y sus extensiones.
+- `sodas`: Implementación de clases relacionadas con la clase asbtracta Bebida.
+    - `flavours`: Sub carpeta de `sodas` conteniendo distintas bebidas.
+- `vendingMachine`: Implementación de la máquina expendedora.
+    - `storages`: Sub carpeta de `vendingMachine` con clases relacionadas a los depósitos de la máquina expendedora.
 
 
 ### Diagrama UML
@@ -64,8 +64,8 @@ El siguiente ejemplo muestra la instanciación de la clase `Comprador` que manip
 
 ### Opciones de bebidas
 
-- `0`: `Benedictino 350 cc`
-- `1`: `Coca Cola 350 cc`
-- `2`: `Fanta 350 cc`
-- `3`: `Sprite 350 cc`
+- `0`: `Benedictino [350cc]`
+- `1`: `Coca Cola [350cc]`
+- `2`: `Fanta [350cc]`
+- `3`: `Sprite [350cc]`
 
