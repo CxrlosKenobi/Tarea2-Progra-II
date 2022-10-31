@@ -55,6 +55,9 @@ El siguiente ejemplo muestra la instanciación de la clase `Comprador` que manip
 ### Ejemplo de salida
 
 ![Ejemplo](assets/Example.png)
+![Ejemplo](assets/Example2.png)
+![Ejemplo](assets/Example3.png)
+![Ejemplo](assets/Example4.png)
 ### Excepciones
 
 - `NoHayBebidaException`: Se lanza cuando no hay bebida en el dispensador, devolviendo el dinero.
