@@ -42,7 +42,7 @@ El siguiente ejemplo muestra la instanciación de la clase `Comprador` que manip
 
 ```java
     public static void main(String[] args) {
-        int numBebidas = 5, precioBebidas = 500;
+        int numBebidas = 5, precioBebidas = 600;
         Expendedor vendomatic = new Expendedor(numBebidas, precioBebidas);
 
         int tipoBebida = 0;
