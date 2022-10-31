@@ -22,7 +22,8 @@ public class Comprador {
                 dineroDevuelto += 100;
 
             } while (monedita != null);
-            System.out.println("Vuelto: " + this.cuantoVuelto());
+
+            System.out.println("Mi vuelto es: " + this.cuantoVuelto());
 
         } catch (PagoInsuficienteException | NoHayBebidaException | PagoIncorrectoException e) {
             System.out.println(e.getMessage());
@@ -30,7 +31,7 @@ public class Comprador {
     }
 
     public int cuantoVuelto() {
-        return dineroDevuelto;
+        return this.dineroDevuelto;
     }
 
     public String queBebiste(Bebida b) {
